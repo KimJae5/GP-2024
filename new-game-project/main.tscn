@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://d27ycewghtms7"]
+
+[ext_resource type="PackedScene" uid="uid://crrr7oix5ti8m" path="res://world.tscn" id="1_iak7v"]
+[ext_resource type="PackedScene" uid="uid://cpbpvf1iigv0p" path="res://player.tscn" id="2_8irm2"]
+[ext_resource type="Script" path="res://control.gd" id="3_nq0qx"]
+
+[node name="Main" type="Node"]
+
+[node name="World" parent="." instance=ExtResource("1_iak7v")]
+
+[node name="Player" parent="." instance=ExtResource("2_8irm2")]
+position = Vector2(376, 413)
+scale = Vector2(2, 2)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchor_top = 0.76
+anchor_right = 1.0
+anchor_bottom = 0.836
+offset_top = -620.16
+offset_right = -728.0
+offset_bottom = -642.176
+script = ExtResource("3_nq0qx")

@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://cpbpvf1iigv0p"]
+
+[ext_resource type="Texture2D" uid="uid://cpcvnhn51tbb2" path="res://grape boi.png" id="1_1cc3o"]
+[ext_resource type="Script" path="res://player.gd" id="1_lhl8f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7l4wu"]
+size = Vector2(29, 31)
+
+[node name="Player" type="CharacterBody2D"]
+position = Vector2(348, 381)
+script = ExtResource("1_lhl8f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6.5, 7.5)
+shape = SubResource("RectangleShape2D_7l4wu")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(7, 8)
+scale = Vector2(1.875, 1.9375)
+texture = ExtResource("1_1cc3o")
